@@ -75,10 +75,6 @@ button {
   font: inherit;
 }
 
-#root {
-  overflow-x: hidden;
-}
-
 .eyebrow {
   font-family: "JetBrains Mono", monospace;
   font-size: 12.5px;

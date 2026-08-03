@@ -7,7 +7,7 @@ const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#next-translate", label: "Next Translate" },
   { href: "#about", label: "About" },
-  { href: "#notify", label: "Contact" },
+  { href: `mailto:${siteConfig.contactEmail}`, label: "Contact" },
 ];
 
 export default function Nav() {

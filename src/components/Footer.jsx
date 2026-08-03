@@ -6,7 +6,7 @@ const footerCols = [
     heading: "Studio",
     links: [
       { href: "#about", label: "About" },
-      { href: "#notify", label: "Contact" },
+      { href: `mailto:${siteConfig.contactEmail}`, label: "Contact" },
     ],
   },
   {
@@ -63,6 +63,16 @@ export default function Footer() {
             <a href={siteConfig.social.tiktok} aria-label="TikTok" target="_blank" rel="noreferrer">
               <svg viewBox="0 0 24 24">
                 <path d="M16.6 2h-3.2v13.2a2.9 2.9 0 1 1-2.1-2.8v-3.3a6.1 6.1 0 1 0 5.3 6.1V8.9a7.6 7.6 0 0 0 4.4 1.4V7.1a4.4 4.4 0 0 1-4.4-4.4V2Z" />
+              </svg>
+            </a>
+            <a href={siteConfig.social.youtube} aria-label="YouTube" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 12s0-3.5-.45-5.2a2.9 2.9 0 0 0-2-2.05C17.9 4.3 12 4.3 12 4.3s-5.9 0-7.55.45a2.9 2.9 0 0 0-2 2.05C2 8.5 2 12 2 12s0 3.5.45 5.2a2.9 2.9 0 0 0 2 2.05C6.1 19.7 12 19.7 12 19.7s5.9 0 7.55-.45a2.9 2.9 0 0 0 2-2.05C22 15.5 22 12 22 12Zm-12.1 3.4V8.6l5.4 3.4-5.4 3.4Z" />
+              </svg>
+            </a>
+            <a href={siteConfig.social.producthunt} aria-label="Product Hunt" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M13.4 12H10.4V8.4H13.4C14.4 8.4 15.2 9.2 15.2 10.2C15.2 11.2 14.4 12 13.4 12ZM13.4 5.4H7.4V18.6H10.4V15H13.4C16.1 15 18.2 12.9 18.2 10.2C18.2 7.5 16.1 5.4 13.4 5.4Z" />
               </svg>
             </a>
           </div>

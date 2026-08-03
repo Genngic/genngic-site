@@ -25,6 +25,8 @@ export const siteConfig = {
     twitter: "https://x.com/Genngic",
     instagram: "https://www.instagram.com/genngic/?hl=en",
     tiktok: "https://www.tiktok.com/@genngic",
+    youtube: "https://www.youtube.com/@Genngic",
+    producthunt: "https://www.producthunt.com/@genngic",
   },
 
   // Netlify Forms endpoint name. Must match the hidden form's `name`
