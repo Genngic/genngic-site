@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genngic — Software that adapts to you</title>
+    <meta name="description" content="Genngic is an independent app studio. First up: Next Translate — real-time AI voice translation that skips the settings and just listens." />
+    <link rel="icon" href="/genngic-mark.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Hidden static form so Netlify's build bot can detect and register
+      the "notify" form (Netlify Forms only scans plain HTML, not the
+      React-rendered one). Keep the field names in sync with
+      src/components/Notify.jsx.
+    -->
+    <form name="notify" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+      <input name="bot-field" />
+    </form>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

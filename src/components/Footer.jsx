@@ -1,0 +1,73 @@
+import { siteConfig } from "../siteConfig";
+
+// EDIT HERE: footer link columns below. Social URLs live in src/siteConfig.js.
+const footerCols = [
+  {
+    heading: "Studio",
+    links: [
+      { href: "#about", label: "About" },
+      { href: "#notify", label: "Contact" },
+    ],
+  },
+  {
+    heading: "Apps",
+    links: [
+      { href: "#next-translate", label: siteConfig.appName },
+      { href: "#about", label: "What's next" },
+    ],
+  },
+];
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer>
+      <div className="wrap">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <a href="#home" className="brand-lockup" aria-label={`${siteConfig.studioName} — home`}>
+              <span className="brand-mark" role="img" />
+              <span className="brand-word" role="img" />
+            </a>
+            <p>{siteConfig.tagline}</p>
+          </div>
+          <div className="footer-cols">
+            {footerCols.map((col) => (
+              <div className="footer-col" key={col.heading}>
+                <h5>{col.heading}</h5>
+                {col.links.map((link) => (
+                  <a key={link.label} href={link.href}>
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>
+            © {year} {siteConfig.studioName}. All rights reserved.
+          </span>
+          <div className="social-row">
+            <a href={siteConfig.social.twitter} aria-label="X / Twitter" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M18.3 2H21l-6.6 7.5L22 22h-6.9l-5.4-6.9L3.5 22H1l7.1-8.1L1 2h7l4.9 6.3L18.3 2Zm-1.2 18h1.9L7 4h-2l12.1 16Z" />
+              </svg>
+            </a>
+            <a href={siteConfig.social.instagram} aria-label="Instagram" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2c2.7 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.89 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.07.06 1.42.06 4.12s-.01 3.05-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.07.05-1.42.06-4.12.06s-3.05-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.05 2 14.7 2 12s.01-3.05.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45 2.53c.64-.25 1.37-.42 2.43-.47C8.95 2.01 9.3 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM18.4 6.6a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z" />
+              </svg>
+            </a>
+            <a href={siteConfig.social.tiktok} aria-label="TikTok" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M16.6 2h-3.2v13.2a2.9 2.9 0 1 1-2.1-2.8v-3.3a6.1 6.1 0 1 0 5.3 6.1V8.9a7.6 7.6 0 0 0 4.4 1.4V7.1a4.4 4.4 0 0 1-4.4-4.4V2Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single-page app: send all unknown paths to index.html so client-side
+# anchor navigation (#about, #notify, ...) and direct deep links both work.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
