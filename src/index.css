@@ -163,7 +163,6 @@ section {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
   background: rgba(250, 251, 252, 0.55);
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
@@ -276,7 +275,6 @@ section {
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
   box-shadow: 0 20px 60px rgba(91, 99, 107, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
