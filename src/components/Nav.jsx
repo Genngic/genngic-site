@@ -7,6 +7,7 @@ import { siteConfig } from "../siteConfig";
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#next-translate", label: "Next Translate" },
+  { href: "#ui", label: "UI" },
   { href: "#about", label: "About" },
   { href: `mailto:${siteConfig.contactEmail}`, label: "Contact", isContact: true },
 ];
