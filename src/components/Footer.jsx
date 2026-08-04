@@ -40,8 +40,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="#home" className="brand-lockup" aria-label={`${siteConfig.studioName} — home`}>
-              <span className="brand-mark" role="img" />
-              <span className="brand-word" role="img" />
+              <span className="brand-logo" role="img" />
             </a>
             <p>{siteConfig.tagline}</p>
           </div>

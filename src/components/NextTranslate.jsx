@@ -5,18 +5,18 @@ import { siteConfig } from "../siteConfig";
 const features = [
   {
     num: "01",
-    title: "Zero setup",
-    body: "No source or target language to choose. Start talking — it figures out the rest.",
+    title: "Zero re-setup",
+    body: "Select your native language once on install. Start talking — it figures out the rest.",
   },
   {
     num: "02",
     title: "Understands people",
-    body: "Built to catch slang, expressions, and tone — not robotic, word-for-word translation.",
+    body: "Built to catch slang, expressions, and tone in 57 languages — not robotic, word-for-word translation",
   },
   {
     num: "03",
-    title: "Real conversations",
-    body: "Made for actual back-and-forth conversation, not one phrase at a time.",
+    title: "Just talk",
+    body: "Say what you want to say. Just add : Translate to ... at the end of your sentence. It will follow your commands.",
   },
 ];
 

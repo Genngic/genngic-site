@@ -28,8 +28,7 @@ export default function Nav() {
     <header className="nav">
       <div className="nav-inner">
         <a href="#home" className="brand-lockup" aria-label={`${siteConfig.studioName} — home`}>
-          <span className="brand-mark" role="img" />
-          <span className="brand-word" role="img" />
+          <span className="brand-logo" role="img" />
         </a>
         <nav className="nav-links">
           {navLinks.map((link) => (

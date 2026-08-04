@@ -179,8 +179,7 @@ section {
   align-items: center;
   gap: 12px;
 }
-.brand-mark,
-.brand-word {
+.brand-logo {
   position: relative;
   display: block;
   overflow: hidden;
@@ -191,21 +190,12 @@ section {
   mask-size: contain;
   -webkit-mask-position: center;
   mask-position: center;
-}
-.brand-mark {
-  width: 30px;
+  -webkit-mask-image: url("/genngic-logo.png");
+  mask-image: url("/genngic-logo.png");
+  width: 158px;
   height: 30px;
-  -webkit-mask-image: url("/genngic-mark.png");
-  mask-image: url("/genngic-mark.png");
 }
-.brand-word {
-  width: 118px;
-  height: 24.7px;
-  -webkit-mask-image: url("/genngic-wordmark.png");
-  mask-image: url("/genngic-wordmark.png");
-}
-.brand-mark::after,
-.brand-word::after {
+.brand-logo::after {
   content: "";
   position: absolute;
   top: -100%;
@@ -607,6 +597,14 @@ section {
     transform: translate(30%, 18%);
   }
 }
+.metal-plate .plate-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42%;
+  filter: drop-shadow(0 12px 20px rgba(36, 39, 42, 0.2));
+}
 .metal-plate .plate-label {
   position: absolute;
   bottom: 22px;
@@ -749,13 +747,9 @@ footer {
   padding-bottom: 40px;
   border-bottom: 1px solid var(--silver-300);
 }
-.footer-brand .brand-mark {
-  width: 36px;
-  height: 36px;
-}
-.footer-brand .brand-word {
-  width: 142px;
-  height: 29.7px;
+.footer-brand .brand-logo {
+  width: 199px;
+  height: 38px;
 }
 .footer-brand p {
   color: var(--ink-soft);

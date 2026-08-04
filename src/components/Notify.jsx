@@ -39,7 +39,7 @@ export default function Notify() {
             Stay in the loop
           </span>
           <h2>Be first to know when {siteConfig.appName} launches.</h2>
-          <p>No spam — just one email when it's live on Google Play.</p>
+          <p>No spam. Just one email when it's live on Google Play.</p>
           <form className="notify-form" onSubmit={handleSubmit}>
             <input
               type="email"
