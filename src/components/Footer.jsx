@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { siteConfig } from "../siteConfig";
 
 // EDIT HERE: footer link columns below. Social URLs live in src/siteConfig.js.
@@ -6,7 +7,7 @@ const footerCols = [
     heading: "Studio",
     links: [
       { href: "#about", label: "About" },
-      { href: `mailto:${siteConfig.contactEmail}`, label: "Contact" },
+      { href: `mailto:${siteConfig.contactEmail}`, label: "Contact", isContact: true },
     ],
   },
   {
@@ -20,6 +21,18 @@ const footerCols = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const [copied, setCopied] = useState(false);
+
+  // mailto: links only work if the visitor's OS has a default mail app
+  // configured (and some embedded/in-app browsers block them outright).
+  // Copying the address to the clipboard means the click always visibly
+  // does *something*, even when mailto silently fails to open anything.
+  function handleContactClick() {
+    navigator.clipboard?.writeText(siteConfig.contactEmail).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
 
   return (
     <footer>
@@ -37,8 +50,13 @@ export default function Footer() {
               <div className="footer-col" key={col.heading}>
                 <h5>{col.heading}</h5>
                 {col.links.map((link) => (
-                  <a key={link.label} href={link.href}>
-                    {link.label}
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={link.isContact ? handleContactClick : undefined}
+                    title={link.isContact ? `Also copies ${siteConfig.contactEmail} to your clipboard` : undefined}
+                  >
+                    {link.isContact && copied ? "Copied email!" : link.label}
                   </a>
                 ))}
               </div>
